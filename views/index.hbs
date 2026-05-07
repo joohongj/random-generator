@@ -1,2 +1,37 @@
-{{!-- Your html goes here --}}
-<h1>Random Generator</h1>
+<style>
+  h3 {
+    color: rgb(91, 88, 88);
+  }
+
+  #nextBtn {
+    border: 2px rgb(88, 77, 77);
+    color: rgb(50, 50, 133);
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  #nextBtn button:hover {
+    background: blue;
+  }
+</style>
+
+
+
+<h1>Quote of the Day*</h1>
+
+<h2 id="quote">{{quote}}</h2>
+<h3 id="name">-{{name}}</h3>
+
+<button id="nextBtn">Next Quote</button>
+
+<script>
+  document.getElementById('nextBtn').addEventListener('click', async () => {
+
+    const response = await fetch('/quote');
+    const data = await response.json();
+
+    document.getElementById('quote').innerText = data.quote;
+    document.getElementById('name').innerText = "— " + data.name;
+  });
+</script>

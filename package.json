@@ -12,5 +12,19 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Build a random generator webpage using Express.js and Handlebars, serving one random result from a local JSON file on each page load.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joohongj/random-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/joohongj/random-generator/issues"
+  },
+  "homepage": "https://github.com/joohongj/random-generator#readme"
 }
