@@ -3,7 +3,7 @@ var router = express.Router();
 
 const quotes = require('../data/data.json');
 
-router.get('/', function (req, res) {
+router.get('/', function (req, res, next) {
 
     // 1. Read the data.json file
     // 2. Pick a random item from the data.json list
